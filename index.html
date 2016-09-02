@@ -13,5 +13,16 @@
 	</head>
 	<body>
 		<div id="box"></div>
+		
+		<script>
+			var box = document.getElementById('box');
+			
+			box.onmousedown = function(e) {
+				var disX = e.pageX - box.offsetLeft;
+				var disY = e.pageY - box.offsetTop;
+				
+				
+			}
+		</script>
 	</body>
 </html>
