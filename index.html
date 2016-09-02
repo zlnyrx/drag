@@ -17,11 +17,17 @@
 		<script>
 			var box = document.getElementById('box');
 			
+
 			box.onmousedown = function(e) {
 				var disX = e.pageX - box.offsetLeft;
 				var disY = e.pageY - box.offsetTop;
-				
-				
+				document.onmousemove = function(e) {
+					box.style.left = (e.pageX - disX)+'px';
+					box.style.top = (e.pageY - disY)+'px';
+				}
+				document.onmouseup = function(e) {
+					document.onmousemove = null;
+
 			}
 		</script>
 	</body>
